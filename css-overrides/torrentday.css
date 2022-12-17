@@ -1,9 +1,9 @@
 /*
- * CSS override for torrentday. Not the prettiest, but its main purpose is to not having to scroll through
- * recommended by staff, ads etc. It also collapses categories.
+ * CSS override for Torrentday. Its main purpose is to not having to scroll through recommended by staff, ads etc.
+ * It also collapses categories and displays it when you hover over the search field. This CSS file assume dark theme
+ * is selected in Torrentday settings.
  *
  * TODO:
- * * Make it dark mode.
  */
 
 /* Removess new icons */
@@ -14,6 +14,7 @@
 #pageWrapper {
   width: 1030px;
 }
+
 /* Removes 'recommended by Staff' and 'Hot right now' */
 #topTables {
   display: none;
@@ -23,6 +24,7 @@
 a[href="/donate.php"] {
   display: none;
 }
+
 /* Removes annoying stuff */
 .tmS {
   display: none;
@@ -45,13 +47,18 @@ form[action="?#torrents"]:not(:hover) {
 
 .menu, #navBarOuter, #userBar {
   border-radius: 0;
-	background: #fff !important;
-	color: #000;
+  background: #343434;
 }
-.menu, #uiSearch .wrap {
-	box-shadow: none;
-/*  border-bottom-left-radius: 20px !important;*/
+.menu *, #navBarOuter *, #userBar * {
+  color: #bbb;
+  border: 0;
 }
-.menu > li {
-  border: none;
+select {
+  background-color: #343434;
+}
+#torrentTable tbody tr th {
+  background-color: #343434;
+}
+* {
+  box-shadow: none;
 }
