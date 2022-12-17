@@ -1,7 +1,7 @@
 /*
  * CSS override for Torrentday. Its main purpose is to not having to scroll through recommended by staff, ads etc.
- * It also collapses categories and displays it when you hover over the search field. This CSS file assume dark theme
- * is selected in Torrentday settings.
+ * It also collapses categories and displays it when you hover over the search field. This CSS file assumes that
+ * dark theme is selected in Torrentday settings. Import it into a CSS injecting plugin for your browser.
  *
  * TODO:
  */
