@@ -49,16 +49,20 @@ form[action="?#torrents"]:not(:hover) {
   border-radius: 0;
   background: #343434;
 }
+
 .menu *, #navBarOuter *, #userBar * {
   color: #bbb;
   border: 0;
 }
+
 select {
   background-color: #343434;
 }
+
 #torrentTable tbody tr th {
   background-color: #343434;
 }
+
 * {
   box-shadow: none;
 }
