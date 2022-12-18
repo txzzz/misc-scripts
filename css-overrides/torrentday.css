@@ -47,7 +47,11 @@ form[action="?#torrents"]:not(:hover) {
 
 .menu, #navBarOuter, #userBar {
   border-radius: 0;
-  background: #343434;
+  background: #343434 !important;
+}
+
+#uiSearch * {
+  background: #000 !important;
 }
 
 .menu *, #navBarOuter *, #userBar * {
@@ -55,11 +59,20 @@ form[action="?#torrents"]:not(:hover) {
   border: 0;
 }
 
-select {
+select, input, button, a.btn {
   background-color: #343434;
+  border: 0;
+  border-radius: 5px;
+  padding: 4px 15px;
+  color: white;
+  letter-spacing: 0.2px;
 }
 
 #torrentTable tbody tr th {
+  background-color: #343434;
+}
+
+.current {
   background-color: #343434;
 }
 
