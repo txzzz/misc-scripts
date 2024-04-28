@@ -154,7 +154,7 @@ function add_https() {
 	local url
 	read url
 	url=$(echo "$url" | sed -E 's|^http://|https://|')
-	if [ ${url:0:8} != "https://" ]; then
+	if [[ "${url:0:8}" != "https://" ]]; then
 		url="https://${url}"
 	fi
 	echo "$url"
@@ -164,7 +164,7 @@ function generate_rewrites() {
 	for line in $(cat "$infile"); do
 		from=$(echo "$line" | awk -F $delimiter '{print $1}' | xargs | tr -d '\r' | sed -E 's|^https?://[^/]+||')
 		if ! has_query_params "$from" && ! is_file "$from"; then
-			if [ ${from:0-1} = "/" ]; then
+			if [[ "${from:0-1}" == "/" ]]; then
 				from="${from}?"
 			else
 				from="${from}/?"

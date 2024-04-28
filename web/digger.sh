@@ -9,6 +9,7 @@ fi
 domains=$(echo $@ | tr ',' ' ' | xargs)
 
 for domain in $domains; do
+	domain=$(echo $domain | sed -E 's+^https?://++' | cut -d '/' -f1)
         echo "$ dig +short ${domain}"
         ips="$(dig +short $domain | tr '\n' ' ' | tr -d '\r')"
         for ip in $ips; do
